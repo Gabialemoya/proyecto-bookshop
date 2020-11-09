@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - BookShop</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    
     <link rel="stylesheet" href="~/css/site.css" />
+    
 </head>
 <body>
     <header>
@@ -35,9 +37,10 @@
                     </ul>
                 </div>
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2"  placeholder="Search">
+                    <button class="btn btn-outline-dark my-2 my-sm-0" onclick="location.href='./home/search_result'">Search</button>
                 </form>
+                <a class="user-button" href=""><i class="far fa-user-circle" style="size: 15px;"></i></a>
             </div>
             
         </nav>
@@ -55,6 +58,7 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/d93d664563.js" crossorigin="anonymous"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>

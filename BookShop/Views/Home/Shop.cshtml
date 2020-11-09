@@ -1,24 +1,95 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<div class="text-center">
-    <div class="container-body">
-        <h2>BookShop</h2>
-        <form class="form-inline">
+
+<div class="container">
+            <div class="row">
+                <div class="col-sm-8" style="text-align: left;">
+                    <h1>SHOP</h1>
+                </div>
+                <div class="col-sm-4" style="text-align: right;">
+                    <div  style="align-items: right;"> 
+                        <button id="card-button" type="button" class="btn btn-primary btn-circle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-shopping-cart"></i></button> 
+                        <ul class="dropdown-menu dropdown-menu-right"> 
+                            <li>
+                                <a href="#" class="btn btn-light btn-fab btn-raised">Hola</a> 
+                            </li> 
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </div>
+<div class="text-center">    
+    <div class="container-body"> 
+        <form class="form-inline d-flex">
             <div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Action
-  </button>
-  <div class="dropdown-menu">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="#">Separated link</a>
-  </div>
-</div>
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Categorias
+                </button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Acción</a>
+                    <a class="dropdown-item" href="#">Clásicos</a>
+                    <a class="dropdown-item" href="#">Cuentos</a>
+                    <a class="dropdown-item" href="#">Educacion</a>
+                    <a class="dropdown-item" href="#">Infantiles</a>
+                    <a class="dropdown-item" href="#">Novela</a>
+                    <a class="dropdown-item" href="#">Suspenso</a>
+                    <a class="dropdown-item" href="#">Teatro</a>
+                    <a class="dropdown-item" href="#">Terror</a>
+                </div>
+            </div>
+            <input class="form-control mr-sm-2" type="search" placeholder="Ingrese un libro..." aria-label="Search">
+            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
         </form>
-    </div>    
-</div>
+        <p style="text-align: left;">Aca deberia aparecer la categoria elegida</p>
+        
+    </div>
+    
+    <div class="container-body">
+        <div class="row row-cols-1 row-cols-md-3">
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://www.nypl.org/sites/default/files/8435321969_c1eea0631a_o.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Libro 1</h5>
+                        <p class="card-text">Autor/a</p>
+                        <div class="book-price">
+                            <h5>$0</h5>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-outline-primary">Ver detalles</button>
+                            <button class="btn btn-primary" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://www.nypl.org/sites/default/files/8435321969_c1eea0631a_o.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a short card.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://www.nypl.org/sites/default/files/8435321969_c1eea0631a_o.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-4">
+                <div class="card h-100">
+                    <img src="https://www.nypl.org/sites/default/files/8435321969_c1eea0631a_o.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+</div> 
