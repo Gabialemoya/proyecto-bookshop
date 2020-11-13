@@ -51,6 +51,49 @@ namespace BookShop.Controllers
             return View();
         }
 
+        public JsonResult ConsultarAutores()
+        {
+            return Json(db.Autores.ToList());
+        }
+
+        public JsonResult CrearAutor(string nombreCompleto)
+        {
+            Autor nuevoAutor = new Autor{
+                nombreCompleto = nombreCompleto
+            };
+
+            db.Autores.Add(nuevoAutor);
+            db.SaveChanges();
+            return Json(nuevoAutor);
+        }
+
+         public JsonResult CrearGenero(string descripcionGenero)
+        {
+            Genero nuevoGenero = new Genero{
+                DescripcionGenero = descripcionGenero
+            };
+
+            db.Generos.Add(nuevoGenero);
+            db.SaveChanges();
+            return Json(nuevoGenero);
+        }
+
+         public JsonResult CrearLibro(string isbn, string titulo, string descripcionLibro, string portada, Autor creadorID, Genero clasificacionID)
+         {
+            Libro nuevoLibro = new Libro{
+                ISBN = isbn,
+                Titulo = titulo,
+                DescripcionLibro = descripcionLibro,
+                Portada = portada,
+                Creador = creadorID ,
+                Clasificacion = clasificacionID
+            };
+
+            db.Libros.Add(nuevoLibro);
+            db.SaveChanges();
+            return Json(nuevoLibro);
+         }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
