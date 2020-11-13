@@ -11,11 +11,13 @@ namespace BookShop.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private readonly ILogger<HomeController> logger;
+        private readonly LibrosContext db;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger, LibrosContext contexto)
         {
-            _logger = logger;
+            this.logger = logger;
+            this.db = contexto;
         }
 
         public IActionResult Index()
