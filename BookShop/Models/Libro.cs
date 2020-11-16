@@ -16,5 +16,9 @@ namespace BookShop.Models
         public Autor Creador { get; set; }
         [Required]
         public Genero Clasificacion { get; set; }
+        [Required]
+        public float Precio { get; set; }
+        [Required]
+        public int Stock { get; set; }
     }
 }

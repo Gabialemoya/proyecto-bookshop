@@ -1,4 +1,6 @@
 @model List<Libro>
+
+
 @{
     ViewData["Title"] = "Home Page";
 }
@@ -19,7 +21,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+</div>
 <div class="text-center">    
     <div class="container-body"> 
         <form class="form-inline d-flex">
@@ -28,7 +30,8 @@
                         Categorias
                 </button>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Acción</a>
+                    
+                   <a class="dropdown-item" href="#">Acción</a>
                     <a class="dropdown-item" href="#">Clásicos</a>
                     <a class="dropdown-item" href="#">Cuentos</a>
                     <a class="dropdown-item" href="#">Educacion</a>
@@ -36,7 +39,7 @@
                     <a class="dropdown-item" href="#">Novela</a>
                     <a class="dropdown-item" href="#">Suspenso</a>
                     <a class="dropdown-item" href="#">Teatro</a>
-                    <a class="dropdown-item" href="#">Terror</a>
+                    <a class="dropdown-item" href="#">Terror</a>>
                 </div>
             </div>
             <input class="form-control mr-sm-2" type="search" placeholder="Ingrese un libro..." aria-label="Search">
@@ -48,49 +51,28 @@
     
     <div class="container-body">
         <div class="row row-cols-1 row-cols-md-3">
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="https://www.nypl.org/sites/default/files/8435321969_c1eea0631a_o.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Libro 1</h5>
-                        <p class="card-text">Autor/a</p>
-                        <div class="book-price">
-                            <h5>$0</h5>
+            @foreach (Libro libro in Model)
+            {
+                <div class="col mb-4">
+                    <div class="card h-100"> 
+                        <img id="portada-libro" src=@libro.Portada  class="card-img-top" alt="..." style="width: 150px; height: 250px;">
+                        <div class="card-body">
+                            <h5 class="card-title">@libro.Titulo</h5>
+                            <p class="card-text">@libro.Creador</p>
+                            <div class="book-price">
+                                <h5>$ @libro.Precio</h5>
+                            </div>
+                            <div>
+                                <button id="button-book" type="button" class="btn btn-outline-primary">Ver detalles</button>
+                                <button class="btn btn-primary" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                            </div>
                         </div>
-                        <div>
-                            <button type="button" class="btn btn-outline-primary">Ver detalles</button>
-                            <button class="btn btn-primary" type="submit"><i class="fas fa-shopping-cart"></i></button>
-                        </div>
                     </div>
-                </div>
             </div>
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="https://www.nypl.org/sites/default/files/8435321969_c1eea0631a_o.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a short card.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="https://www.nypl.org/sites/default/files/8435321969_c1eea0631a_o.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col mb-4">
-                <div class="card h-100">
-                    <img src="https://www.nypl.org/sites/default/files/8435321969_c1eea0631a_o.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    </div>
-                </div>
-            </div>
+            }
+            
+
         </div>
     </div>   
 </div> 
+</div>

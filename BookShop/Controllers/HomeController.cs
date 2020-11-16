@@ -37,7 +37,7 @@ namespace BookShop.Controllers
 
         public IActionResult Shop()
         {
-            return View();
+            return View(db.Libros.ToList());
         }
     
 
@@ -78,15 +78,19 @@ namespace BookShop.Controllers
             return Json(nuevoGenero);
         }
 
-         public JsonResult CrearLibro(string isbn, string titulo, string descripcionLibro, string portada, Autor creadorID, Genero clasificacionID)
+         public JsonResult CrearLibro(string isbn, string titulo, string descripcionLibro, string portada, int creadorID, int clasificacionID, float precio, int stock)
          {
+            Autor nuevoAutor = db.Autores.Find(creadorID);
+            Genero nuevoGenero = db.Generos.Find(clasificacionID);
             Libro nuevoLibro = new Libro{
                 ISBN = isbn,
                 Titulo = titulo,
                 DescripcionLibro = descripcionLibro,
                 Portada = portada,
-                Creador = creadorID ,
-                Clasificacion = clasificacionID
+                Creador = nuevoAutor ,
+                Clasificacion = nuevoGenero,
+                Precio = precio,
+                Stock = stock
             };
 
             db.Libros.Add(nuevoLibro);
