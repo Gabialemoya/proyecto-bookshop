@@ -50,12 +50,57 @@
             @RenderBody()
         </main>
     </div>
+    <!-- Site footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h6>BookShop</h6>
+            <p class="text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem odit est veritatis error officiis dicta deleniti ipsum? Ex incidunt corrupti deleniti modi. Ab laborum alias enim in porro! Omnis, id..</p>
+          </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2020 - BookShop - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+          <div class="col-xs-6 col-md-3">
+            <h6>Links</h6>
+            <ul class="footer-links">
+              <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+              <li><a asp-controller="Home" asp-action="About">About</a></li>
+              <li><a asp-controller="Home" asp-action="Shop">Shop</a></li>
+              <li><a asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="col-xs-6 col-md-3">
+            <h6>Get our newsletter</h6>
+            <ul class="footer-links">
+              <li><form class="form-inline">
+                    <input class="form-control mr-sm-1"  placeholder="Ingresá tu email...">
+                    <button class="btn btn-light my-2 my-sm-0" ><i class="far fa-paper-plane"></i></button>
+                </form></li>
+            </ul>
+          </div>
         </div>
-    </footer>
+        <hr>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-sm-6 col-xs-12">
+            <p class="copyright-text">Copyright &copy; 2020 All Rights Reserved by 
+         <a href="#">Gabriela Moya</a>.
+            </p>
+          </div>
+
+          <div class="col-md-4 col-sm-6 col-xs-12">
+            <ul class="social-icons">
+              <li><a class="facebook" href="https://www.facebook.com/gabialemoya"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="twitter" href="https://twitter.com/GabiAleMoya"><i class="fa fa-twitter"></i></a></li>
+              <li><a class="instagram" href="https://www.instagram.com/gabialemoya/?hl=es-la"><i class="fab fa-instagram"></i></a></li>
+              <li><a class="linkedin" href="https://www.linkedin.com/in/gabialemoya/"><i class="fa fa-linkedin"></i></a></li>   
+            </ul>
+          </div>
+        </div>
+      </div>
+</footer>
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/d93d664563.js" crossorigin="anonymous"></script>

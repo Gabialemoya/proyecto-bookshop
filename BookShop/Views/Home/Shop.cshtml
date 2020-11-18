@@ -15,7 +15,9 @@
                         <button id="card-button" type="button" class="btn btn-primary btn-circle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-shopping-cart"></i></button> 
                         <ul class="dropdown-menu dropdown-menu-right"> 
                             <li>
-                                <a href="#" class="btn btn-light btn-fab btn-raised">Hola</a> 
+                                <a class="dropdown-item" href="#">Item 1</a>
+                                <a class="dropdown-item" href="#">Item 2</a>
+                                <a class="dropdown-item" href="#">Item 3</a>
                             </li> 
                         </ul> 
                     </div>
@@ -25,10 +27,17 @@
 <div class="text-center">    
     <div class="container-body"> 
         <form class="form-inline d-flex">
+           <!--  <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                    <option selected disabled>Categorias</option>
+                    <option value="Accion">Accion</option>
+                    <option value="Clasicos">Clasicos</option>
+                    <option value="Cuentos">Cuentos</option>
+                </select>-->
             <div class="btn-group">
                 <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Categorias
                 </button>
+                
                 <div class="dropdown-menu">
                     
                    <a class="dropdown-item" href="#">Acción</a>
@@ -64,7 +73,7 @@
                             </div>
                             <div>
                                 <button id="button-book" type="button" class="btn btn-outline-primary">Ver detalles</button>
-                                <button class="btn btn-primary" type="submit"><i class="fas fa-shopping-cart"></i></button>
+                                <button id="button-add" class="btn btn-primary" type="submit"><i class="fas fa-shopping-cart"></i></button>
                             </div>
                         </div>
                     </div>

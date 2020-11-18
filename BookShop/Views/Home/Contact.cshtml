@@ -1,4 +1,19 @@
 @{
     ViewData["Title"] = "Home Page";
 }
-<h2>Aca va el formulario de contacto</h2>
+<h1>¡Contactate con nosotros!</h1>
+ <form method="POST" action="MostrarDatos">
+        <div class="form-group">
+            <label for="nombre" >Nombre</label>
+            <input class="form-control" name="nombre" placeholder="Ingrese su nombre" required/>
+        </div>
+        <div class="form-group">
+            <label for="mail">Mail</label>
+            <input class="form-control" name="mail" placeholder="Ingrese su mail" required/>
+        </div>
+        <div class="form-group">
+            <label for="comentario">Deje su comentario</label>
+            <textarea class="form-control" name="comentario"></textarea>
+        </div>
+        <input type="submit" class="btn btn-primary" value="Enviar"/>
+    </form>
