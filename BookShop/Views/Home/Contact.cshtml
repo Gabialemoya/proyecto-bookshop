@@ -2,18 +2,18 @@
     ViewData["Title"] = "Home Page";
 }
 <h1>¡Contactate con nosotros!</h1>
- <form method="POST" action="MostrarDatos">
+ <form method="POST" action="EnviarMail">
         <div class="form-group">
-            <label for="nombre" >Nombre</label>
-            <input class="form-control" name="nombre" placeholder="Ingrese su nombre" required/>
+            <label for="nombreUsuario" >Nombre</label>
+            <input class="form-control" name="nombreUsuario" placeholder="Ingrese su nombre" required/>
         </div>
         <div class="form-group">
-            <label for="mail">Mail</label>
-            <input class="form-control" name="mail" placeholder="Ingrese su mail" required/>
+            <label for="mailUsuario">Mail</label>
+            <input class="form-control" name="mailUsuario" placeholder="Ingrese su mail" required/>
         </div>
         <div class="form-group">
-            <label for="comentario">Deje su comentario</label>
-            <textarea class="form-control" name="comentario"></textarea>
+            <label for="mensajeUsuario">Deje su comentario</label>
+            <textarea class="form-control" name="mensajeUsuario"></textarea>
         </div>
         <input type="submit" class="btn btn-primary" value="Enviar"/>
     </form>
