@@ -11,6 +11,9 @@ namespace BookShop.Models
         [Required]
         public List<Genero> Lista_generos { get; set; }
 
+        [Required]
+        public List<Libro> Lista_carrito { get; set; }
+
         
     }
 

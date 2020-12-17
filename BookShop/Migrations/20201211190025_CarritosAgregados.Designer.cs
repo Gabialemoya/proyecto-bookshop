@@ -3,14 +3,16 @@ using System;
 using BookShop.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookShop.Migrations
 {
     [DbContext(typeof(LibrosContext))]
-    partial class LibrosContextModelSnapshot : ModelSnapshot
+    [Migration("20201211190025_CarritosAgregados")]
+    partial class CarritosAgregados
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -46,16 +48,11 @@ namespace BookShop.Migrations
                     b.Property<string>("Mail")
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("CarritoClienteID")
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Clave")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Mail");
-
-                    b.HasIndex("CarritoClienteID");
 
                     b.ToTable("Clientes");
                 });
@@ -86,6 +83,9 @@ namespace BookShop.Migrations
                     b.Property<int?>("ClasificacionID")
                         .HasColumnType("INTEGER");
 
+                    b.Property<string>("ClienteMail")
+                        .HasColumnType("TEXT");
+
                     b.Property<int>("CreadorID")
                         .HasColumnType("INTEGER");
 
@@ -113,18 +113,11 @@ namespace BookShop.Migrations
 
                     b.HasIndex("ClasificacionID");
 
+                    b.HasIndex("ClienteMail");
+
                     b.HasIndex("CreadorID");
 
                     b.ToTable("Libros");
-                });
-
-            modelBuilder.Entity("BookShop.Models.Cliente", b =>
-                {
-                    b.HasOne("BookShop.Models.Carrito", "Carrito")
-                        .WithMany()
-                        .HasForeignKey("CarritoClienteID");
-
-                    b.Navigation("Carrito");
                 });
 
             modelBuilder.Entity("BookShop.Models.Libro", b =>
@@ -136,6 +129,10 @@ namespace BookShop.Migrations
                     b.HasOne("BookShop.Models.Genero", "Clasificacion")
                         .WithMany()
                         .HasForeignKey("ClasificacionID");
+
+                    b.HasOne("BookShop.Models.Cliente", null)
+                        .WithMany("Libros")
+                        .HasForeignKey("ClienteMail");
 
                     b.HasOne("BookShop.Models.Autor", "Creador")
                         .WithMany("Libros")
@@ -154,6 +151,11 @@ namespace BookShop.Migrations
                 });
 
             modelBuilder.Entity("BookShop.Models.Carrito", b =>
+                {
+                    b.Navigation("Libros");
+                });
+
+            modelBuilder.Entity("BookShop.Models.Cliente", b =>
                 {
                     b.Navigation("Libros");
                 });

@@ -36,11 +36,11 @@
                         </li>
                     </ul>
                 </div>
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2"  placeholder="Search">
-                    <button class="btn btn-outline-dark my-2 my-sm-0" onclick="location.href='./home/search_result'">Search</button>
+                <form class="form-inline" method="POST" action="/home/search_result">
+                    <input class="form-control mr-sm-2"  name="titulo" placeholder="Search">
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit" onclick="location.href='./home/search_result'">Search</button>
                 </form>
-                <a class="user-button" href=""><i class="far fa-user-circle" style="size: 15px;"></i></a>
+                <a id="userButton" class="user-button"  href="~/home/login"><i class="far fa-user-circle" style="size: 15px;"></i></a>
             </div>
             
         </nav>
@@ -72,9 +72,9 @@
           <div class="col-xs-6 col-md-3">
             <h6>Get our newsletter</h6>
             <ul class="footer-links">
-              <li><form class="form-inline">
-                    <input class="form-control mr-sm-1"  placeholder="Ingresá tu email...">
-                    <button class="btn btn-light my-2 my-sm-0" ><i class="far fa-paper-plane"></i></button>
+              <li><form class="form-inline" method="POST" action="/home/suscripcion">
+                    <input class="form-control mr-sm-1" name="mailUsuario" placeholder="Ingresá tu email..." required>
+                    <input type="submit" class="btn btn-primary" value="Suscribirme"/>
                 </form></li>
             </ul>
           </div>

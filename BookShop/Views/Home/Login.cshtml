@@ -1,0 +1,42 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+	bool badLogin = (ViewBag.badLogin != null);
+}
+
+<div class="global-container">
+	<div class="card login-form">
+	<div class="card-body">
+		<h3 class="card-title text-center">Iniciar sesión</h3>
+		<div class="card-text">
+			
+			<form class="login" action="IniciarSesion" method="POST">
+				
+				<div class="form-group">
+					<label for="mail">Email</label>
+					<input name="mail" type="email" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+					@if (!badLogin)
+					{
+						<p style="color: red;">La cuenta no existe</p>
+					}
+				</div>
+				<div class="form-group">
+					<label for="clave">Contraseña</label>
+					<a href="#" style="float:right;font-size:12px;">¿Olvidaste tu contraseña?</a>
+					<input name="clave" type="password" class="form-control form-control-sm" id="exampleInputPassword1">
+					@if(badLogin){
+						<p style="color: red;">Contraseña incorrecta</p>
+					}
+				</div>
+				<button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+				
+				<div class="sign-up">
+					¿No tenes una cuenta? <a href="./register">Crear cuenta</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>

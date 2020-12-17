@@ -4,6 +4,8 @@
 // Write your JavaScript code.
 /*
 $(document).ready(function(){
-    var ruta = '~/images/'+@libro.ISBN+'.jpg'
-    $('#portada-libro').s
+    $('.cart').on('click', function(){
+        $('#lista-carrito').append('<a class="dropdown-item" href="#">Item nuevo</a>')
+    });
+
 });*/

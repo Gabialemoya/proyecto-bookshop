@@ -12,5 +12,7 @@ namespace BookShop.Models
         public DbSet<Libro> Libros { get; set; }
         public DbSet<Autor> Autores { get; set; }
         public DbSet<Genero> Generos { get; set; }
+        public DbSet<Cliente> Clientes {get; set; }
+        public DbSet<Carrito> Carritos { get; set;}
     }
 }

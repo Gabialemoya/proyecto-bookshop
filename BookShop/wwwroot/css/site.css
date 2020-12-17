@@ -125,16 +125,16 @@ $social-buttons-circle-dark-grey: #1a1d20;
 */
 
 
-a {
-  color: white;
-}
+
 a:hover {
-  color: orangered;
+  color:rgb(218, 144, 195);
   text-decoration: none;
 }
 
+
+
 ::selection {
-  background: orangered;
+  background: rgb(218, 144, 195);
   text-shadow: none;
 }
 
@@ -189,7 +189,7 @@ ul.social-buttons {
 ul.social-buttons li a:active,
 ul.social-buttons li a:focus,
 ul.social-buttons li a:hover {
-  background-color: orangered;
+  background-color: rgb(207, 173, 197);
 }
 
 ul.social-buttons li a {
@@ -386,4 +386,26 @@ footer .quick-links {
     margin-right:0;
     font-weight:600
   }
+}
+
+
+.login-form{ 
+	width:330px;
+	margin:20px;
+}
+
+.sign-up{
+	text-align:center;
+	padding:20px 0 0;
+}
+
+.alert{
+	margin-bottom:-30px;
+	font-size: 13px;
+	margin-top:20px;
+}
+
+.userButton{
+  color: black;
+  background-color: black;
 }

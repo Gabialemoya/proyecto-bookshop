@@ -1,0 +1,18 @@
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<h1 style="text-align: center;">@ViewBag.Titulo</h1>
+<div style="max-width: 940px;">
+  <div class="row g-0" style="display: flex;">
+    <div class="col-md-4">
+      <img src=@ViewBag.Portada alt="...">
+    </div>
+    <div class="col-md-8">
+      <div >
+        <h5 style="text-align: right;">@ViewBag.Descripcion</h5>
+      </div>
+    </div>
+  </div style="margin-top: 20px; display: center;">
+  <a asp-controller="Home" asp-action="Shop" class="btn btn-info">VOLVER</a>
+</div>
